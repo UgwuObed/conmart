@@ -859,7 +859,7 @@ section {
 # Hero Section
 --------------------------------------------------------------*/
 .hero-section {
-  background: linear-gradient(to right, rgba(255, 213, 27, 0.904) 0%, rgba(251, 255, 0, 0.8) 100%), url(../img/hero-bg.jpg);
+  background: linear-gradient(to right, rgba(29, 29, 29, 0.904) 0%, rgba(0, 0, 0, 0.8) 100%), url(../img/hero-bg.jpg);
   position: relative;
 }
 
@@ -961,7 +961,8 @@ section {
 
 .hero-section .iphone-wrap .phone-2,
 .hero-section .iphone-wrap .phone-1 {
-  width: 250px;
+  width: 750px;
+  padding-right: 290px;
 }
 
 @media screen and (max-width: 992px) {
