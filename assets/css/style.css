@@ -14,7 +14,7 @@ html {
 
 body {
   font-family: "Roboto", sans-serif;
-  color: #beba74;
+  color: #9fa1a4;
   line-height: 1.5;
 }
 
@@ -49,7 +49,7 @@ h6,
 }
 
 .text-primary {
-  color: #c0b301 !important;
+  color: #570e9b !important;
 }
 
 .border-top {
@@ -77,7 +77,7 @@ section {
 .section-heading {
   font-size: 3rem;
   font-weight: 700;
-  background: linear-gradient(-45deg, #3db3c5, #c0b301);
+  background: linear-gradient(-45deg, #7b4df8, #570e9b);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -92,7 +92,7 @@ section {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #c0b301;
+  background: #570e9b;
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -106,7 +106,7 @@ section {
 }
 
 .back-to-top:hover {
-  background: #050505;
+  background: #000000;
   color: #fff;
 }
 
@@ -129,12 +129,12 @@ section {
 
 .btn.btn-outline-white:hover {
   background: #fff;
-  color: #c0b301;
+  color: #570e9b;
 }
 
 .btn.btn-primary {
-  background: #c0b301;
-  background: linear-gradient(-45deg, #c0b301, #e1f815);
+  background: #570e9b;
+  background: linear-gradient(-45deg, #570e9b, #7307ff);
   color: #fff;
   box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.15);
 }
@@ -154,7 +154,7 @@ section {
 }
 
 .feature-1 .wrap-icon.icon-1 {
-  background: linear-gradient(-45deg, #c0b301, #e1f815);
+  background: linear-gradient(-45deg, #570e9b, #7307ff);
 }
 
 .feature-1 .wrap-icon i {
@@ -179,7 +179,7 @@ section {
 }
 
 .step .number {
-  background: linear-gradient(-45deg, #c0b301, #e1f815);
+  background: linear-gradient(-45deg, #570e9b, #7307ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 700;
@@ -204,7 +204,7 @@ section {
 }
 
 .review .stars span {
-  color: #FF8803;
+  color: #570e9b;
 }
 
 .review .stars .muted {
@@ -227,11 +227,11 @@ section {
   height: 12px;
   background-color: #fff;
   opacity: 1;
-  border: 1px solid #2d71a1;
+  border: 1px solid #7a34bd;
 }
 
 .testimonials-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #2d71a1;
+  background-color: #7a34bd;
 }
 
 /* Pricing */
@@ -616,7 +616,7 @@ section {
 }
 
 #header.header-scrolled {
-  background: #b4a800;
+  background: #570e9b;
   height: 60px;
 }
 
@@ -700,7 +700,7 @@ section {
   opacity: 0;
   visibility: hidden;
   background: #fff;
-  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  box-shadow: 0px 0px 30px rgba(131, 58, 226, 0.25);
   transition: 0.3s;
   border-radius: 4px;
 }
@@ -712,7 +712,7 @@ section {
 .navbar .dropdown ul a {
   padding: 10px 20px;
   font-size: 15px;
-  color: #101c36;
+  color: #5e1c9b;
 }
 
 .navbar .dropdown ul a i {
@@ -722,7 +722,7 @@ section {
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
 .navbar .dropdown ul li:hover>a {
-  color: #c0b301;
+  color: #570e9b;
 }
 
 .navbar .dropdown:hover>ul {
@@ -783,7 +783,7 @@ section {
   right: 0;
   left: 0;
   bottom: 0;
-  background: rgba(161, 152, 27, 0.9);
+  background: #570e9b;
   transition: 0.3s;
   z-index: 999;
 }
@@ -818,7 +818,7 @@ section {
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover>a {
-  color: #c0b301;
+  color: #570e9b;
 }
 
 .navbar-mobile .dropdown ul {
@@ -830,7 +830,7 @@ section {
   opacity: 1;
   visibility: visible;
   background: #fff;
-  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  box-shadow: 0px 0px 30px rgba(158, 55, 241, 0.25);
 }
 
 .navbar-mobile .dropdown ul li {
@@ -848,7 +848,7 @@ section {
 .navbar-mobile .dropdown ul a:hover,
 .navbar-mobile .dropdown ul .active:hover,
 .navbar-mobile .dropdown ul li:hover>a {
-  color: #c0b301;
+  color: #570e9b;
 }
 
 .navbar-mobile .dropdown>.dropdown-active {
@@ -859,7 +859,7 @@ section {
 # Hero Section
 --------------------------------------------------------------*/
 .hero-section {
-  background: linear-gradient(to right, rgba(29, 29, 29, 0.904) 0%, rgba(0, 0, 0, 0.8) 100%), url(../img/hero-bg.jpg);
+  background: linear-gradient(to right, rgba(127, 60, 204, 0.904) 0%, #570e9b 100%), url(../img/hero-bg.jpg);
   position: relative;
 }
 
@@ -1038,7 +1038,7 @@ section {
 
 .social a:hover {
   color: #fff;
-  background: #c0b301;
+  background: #570e9b;
 }
 
 .social a i {
