@@ -98,7 +98,75 @@
       </div>
 
     </section>
+    <body>
+      <section class="section">
+        <div class="container">
+          <div class="row mb-5 align-items-end">
+            <div class="col-md-6" data-aos="fade-up">
+  
+              <h2>Create Account</h2>
+            </div>
+  
+          </div>
+  
+          <div class="row">
+  
+            <div class="col-md-6 mb-5 mb-md-0" data-aos="fade-up">
+              <form id="form" method="POST" action="/register">
+                @csrf
+                <div class="row">
+                  <div class="col-md-6 form-group">
+                    <label for="name">First Name</label>
+                    <input type="text" name="first_name" class="form-control" id="name" required>
+                  </div>
+                  <div class="col-md-6 form-group mt-3 mt-md-0">
+                    <label for="name">Last Name</label>
+                    <input type="text" class="form-control" name="last_name" id="name" required>
+                  </div>
+                  <div class="col-md-6 form-group mt-3 mt-md-0">
+                    <label for="name">TikTok Username</label>
+                    <input type="text" class="form-control" name="tiktok_name" id="name" required>
+                  </div>
+                  <div class="col-md-12 form-group mt-3">
+                    <label for="name">Email</label>
+                    <input type="email" class="form-control" name="email" id="email" required>
+                  </div>
+                  <div class="col-md-6 form-group mt-3 mt-md-0">
+                    <label for="name">Password</label>
+                    <input type="password" class="form-control" name="password" id="password" required>
+                  </div>
 
+                  <div class="col-md-6 form-group mt-3 mt-md-0">
+                    <label for="name">Comfirm Password</label>
+                    <input type="password" class="form-control" name="password_confirmation" id="password" required>
+                  </div><br><hr>
+                  <div class="col-md-6 form-group">
+                    <button type="submit" class="btn btn-primary">Register</button>
+
+                  </div>
+                  <input type="hidden" name="_token" value="{{ csrf_token() }}">
+
+                </div>
+  
+              </form>
+              <script>
+  document.getElementById('form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    fetch('/register', {
+      method: 'POST',
+      body: new FormData(event.target)
+    }).then(function(response) {
+      // Do something with the response here
+    });
+  });
+</script>
+
+            </div>
+  
+          </div>
+        </div>
+      </section>
    
 
   <!-- ======= Footer ======= -->
