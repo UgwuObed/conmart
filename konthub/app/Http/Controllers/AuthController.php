@@ -38,6 +38,9 @@ class AuthController extends Controller
         ]);
 
         // Return success response
-        return response()->json(['success' => 'User created successfully.'], 200);
+        return response()->json(['success' => 'Account created successfully.'], 200);
+
+        auth()->login($user);
+        return redirect('/dashboard');
     }
 }
