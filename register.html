@@ -116,15 +116,15 @@
                 <div class="row">
                   <div class="col-md-6 form-group">
                     <label for="name">First Name</label>
-                    <input type="text" name="first_name" class="form-control" id="name" required>
+                    <input type="text" name="first_name" class="form-control" id="first_name" required>
                   </div>
                   <div class="col-md-6 form-group mt-3 mt-md-0">
                     <label for="name">Last Name</label>
-                    <input type="text" class="form-control" name="last_name" id="name" required>
+                    <input type="text" class="form-control" name="last_name" id="last_name" required>
                   </div>
                   <div class="col-md-6 form-group mt-3 mt-md-0">
                     <label for="name">TikTok Username</label>
-                    <input type="text" class="form-control" name="tiktok_username" id="name" required>
+                    <input type="text" class="form-control" name="tiktok_username" id="tiktok_username" required>
                   </div>
                   <div class="col-md-12 form-group mt-3">
                     <label for="name">Email</label>
@@ -137,7 +137,7 @@
 
                   <div class="col-md-6 form-group mt-3 mt-md-0">
                     <label for="name">Comfirm Password</label>
-                    <input type="password" class="form-control" name="password_confirmation" id="password" required>
+                    <input type="password" class="form-control" name="password_confirmation" id="password_confirmation" required>
                   </div><br><hr>
                   <div class="col-md-6 form-group">
                     <button type="submit" class="btn btn-primary">Register</button>
@@ -149,16 +149,33 @@
   
               </form>
               <script>
-  document.getElementById('form').addEventListener('submit', function(event) {
+               window.onload = function() {
+  document.getElementById('form').addEventListener('submit', function (event) {
     event.preventDefault();
 
-    fetch('/register', {
+    fetch('http://localhost:8000/register', {
       method: 'POST',
-      body: new FormData(event.target)
-    }).then(function(response) {
-      // Do something with the response here
-    });
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        first_name: document.getElementById('first_name').value,
+        last_name: document.getElementById('last_name').value,
+        tiktok_username: document.getElementById('tiktok_username').value,
+        email: document.getElementById('email').value,
+        password: document.getElementById('password').value,
+        password_confirmation: document.getElementById('password_confirmation').value,
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => {
+      console.error(error);
+      })
   });
+}
 </script>
 
             </div>

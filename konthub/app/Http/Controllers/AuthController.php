@@ -37,10 +37,9 @@ class AuthController extends Controller
             'password' => Hash::make($request->password),
         ]);
 
-        // Return success response
-        return response()->json(['success' => 'Account created successfully.'], 200);
-
-        auth()->login($user);
-        return redirect('/dashboard');
+        return response()->json([
+            'message' => 'Successfully registered user',
+            'user' => $user,
+        ], 201);
     }
 }
