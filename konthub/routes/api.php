@@ -20,6 +20,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::middleware(HandleCors::class . ':api,http')->group(function () {
-    Route::post('/register', 'AuthController@register');
+    Route::post('/register', 'AuthController@register')->middleware('AddCorsHeaders');
 });
 

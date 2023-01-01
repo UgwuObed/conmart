@@ -22,7 +22,7 @@ class User extends Authenticatable
     protected $fillable = [
         'first_name',
         'last_name',
-        'tiktok_name',
+        'tiktok_username',
         'email',
         'password',
     ];
