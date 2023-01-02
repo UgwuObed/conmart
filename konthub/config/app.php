@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Facade;
-require_once '/path/to/vendor/autoload.php';
 
 return [
 
@@ -182,7 +181,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-        Illuminate\Barryvdh\Cors\ServiceProvider::class,
+       
 
         /*
          * Package Service Providers...
@@ -212,6 +211,7 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'ExampleClass' => App\Example\ExampleClass::class,
+        'Cors' => Barryvdh\Cors\Facade::class,
     ])->toArray(),
 
 ];

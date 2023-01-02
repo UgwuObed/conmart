@@ -17,8 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware(HandleCors::class)->group(function () {
+Route::group(['middleware' => 'cors'], function () {
     Route::post('/register', 'AuthController@register')->middleware('AddCorsHeaders');
 });
-Route::post('/login', 'AuthController@login');
-Route::post('/dashboard', 'AuthController@dashboard');

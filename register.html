@@ -149,14 +149,16 @@
   
               </form>
               <script>
-               window.onload = function() {
-  document.getElementById('form').addEventListener('submit', function (event) {
-    event.preventDefault();
+   document.getElementById('form').addEventListener('submit', (event) => {
+  event.preventDefault();
 
-    fetch('http://127.0.0.1:8000/register', {
+  const formData = new FormData(event.target);
+
+    fetch('http://localhost:8000/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'Origin': 'http://localhost:8000'
       },
       body: JSON.stringify({
         first_name: document.getElementById('first_name').value,
@@ -175,7 +177,7 @@
       console.error(error);
       })
   });
-}
+
 </script>
 
             </div>

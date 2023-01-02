@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Middleware;
+use Barryvdh\Cors\Cors;
 
 use Closure;
 
