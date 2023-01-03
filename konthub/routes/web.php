@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Middleware\AddCorsHeaders;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +19,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::group(['middleware' => 'cors'], function () {
-    Route::post('/register', 'AuthController@register')->middleware('AddCorsHeaders');
-});
+Route::post('/register', 'AuthController@register')->middleware('cors');
