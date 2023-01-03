@@ -22,7 +22,6 @@ class Kernel extends HttpKernel
         \App\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
         \App\Http\Middleware\AddCorsHeaders::class,
-        \Barryvdh\Cors\HandleCors::class,
     ];
 
     /**
@@ -67,5 +66,7 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'cors' => \App\Http\Middleware\AddCorsHeaders::class,
         'cors' => \Fruitcake\Cors\HandleCors::class,
+        'cors' => \App\Http\Middleware\Cors::class, 
+        'cors' => \App\Http\Middleware\AddCorsHeaders::class,
     ];
 }

@@ -2,8 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use \Barryvdh\Cors\HandleCors;
-use Barryvdh\Cors\Cors;
+
 use App\Http\Middleware\AddCorsHeaders;
 
 /*
@@ -21,5 +20,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/register', 'AuthController@register')->middleware('AddCorsHeaders');
+Route::middleware('cors')->group(function () {
+    Route::post('/register', 'AuthController@register');
+});
+
 

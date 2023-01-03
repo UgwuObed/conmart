@@ -19,4 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('/register', 'AuthController@register')->middleware('cors');
+Route::middleware('cors')->group(function () {
+    Route::post('/register', 'AuthController@register');
+});
+

@@ -23,9 +23,9 @@ return [
 
     'allowed_origins_patterns' => [],
 
-    'allowed_headers' => ['*'],
+    'allowed_headers' => ['*', 'X-CSRF-TOKEN'],
 
-    'exposed_headers' => false,
+    'exposed_headers' => ['X-CSRF-TOKEN'],
 
     'max_age' => 0,
 
