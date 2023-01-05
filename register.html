@@ -143,7 +143,7 @@
                     <button type="submit" class="btn btn-primary">Register</button>
 
                   </div>
-                  <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                  <meta name="csrf-token" content="{{ csrf_token() }}">
 
                 </div>
   
@@ -153,28 +153,29 @@
   event.preventDefault();
 
   const formData = new FormData(event.target);
+  const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 
-    fetch('http://localhost:8000/register', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Origin': 'http://localhost:8000'
-      },
-      body: JSON.stringify({
-        first_name: document.getElementById('first_name').value,
-        last_name: document.getElementById('last_name').value,
-        tiktok_username: document.getElementById('tiktok_username').value,
-        email: document.getElementById('email').value,
-        password: document.getElementById('password').value,
-        password_confirmation: document.getElementById('password_confirmation').value,
-      }),
+  fetch('http://localhost:8000/register', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Origin': 'http://localhost:8000',
+      'X-CSRF-TOKEN': csrfToken,
+    },
+    body: JSON.stringify({
+      first_name: document.getElementById('first_name').value,
+      last_name: document.getElementById('last_name').value,
+      tiktok_username: document.getElementById('tiktok_username').value,
+      email: document.getElementById('email').value,
+      password: document.getElementById('password').value,
+      password_confirmation: document.getElementById('password_confirmation').value,
+    }),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
     })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-      })
-      .catch((error) => {
-      console.error(error);
+    .catch((error) => {
       })
   });
 
