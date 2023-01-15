@@ -929,62 +929,47 @@ section {
   color: #fff;
 }
 
-.hero-section .iphone-wrap {
-  position: relative;
-}
+.phone-1 {
+  max-width: 100%;
+  object-fit: contain;
+  object-position: right;
+  width: 800px;
+  height: 600px;
+  position: absolute;
+  top: 20px;
+  right: 0;
+  }
+  
+
 
 @media screen and (max-width: 992px) {
-  .hero-section .iphone-wrap {
-    text-align: center;
+  .phone-1 {
+    width: 90%;
+    height: auto;
+    
   }
 }
 
-.hero-section .iphone-wrap .phone-2,
+
 .hero-section .iphone-wrap .phone-1 {
   position: absolute;
-  top: -50%;
+  top: 20px;
   overflow: hidden;
-  left: 0;
-  box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.3);
-  border-radius: 30px;
-}
-
-@media screen and (max-width: 992px) {
-
-  .hero-section .iphone-wrap .phone-2,
-  .hero-section .iphone-wrap .phone-1 {
-    position: relative;
-    top: 0;
-    max-width: 100%;
-  }
-}
-
-.hero-section .iphone-wrap .phone-2,
-.hero-section .iphone-wrap .phone-1 {
-  width: 750px;
-  padding-right: 290px;
+  right: 0;
+  border-radius: 40px;
+  width: 800px;
+  height: 600px;
+  object-fit: contain;
+  object-position: right;
 }
 
 @media screen and (max-width: 992px) {
   .hero-section .iphone-wrap .phone-1 {
-    margin-left: -150px;
+    width: 90%;
+    height: auto;
   }
 }
 
-.hero-section .iphone-wrap .phone-2 {
-  margin-top: 50px;
-  margin-left: 100px;
-  width: 250px;
-}
-
-@media screen and (max-width: 992px) {
-  .hero-section .iphone-wrap .phone-2 {
-    width: 250px;
-    position: absolute;
-    margin-top: 0px;
-    margin-left: 100px;
-  }
-}
 
 /*--------------------------------------------------------------
 # Footer
